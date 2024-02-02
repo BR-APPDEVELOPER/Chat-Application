@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavouriteMessages.FavouriteDashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_and_green_status_bar_gradient">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/favourite_dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favourite_chats"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favourite_message_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/status_bar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ripple_effect"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/messages_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="@string/message"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favourite_audio_video_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/favourite_message_cardView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ripple_effect"
+        app:cardBackgroundColor="#03A9F4"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/audio_video_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="@string/audio_and_video"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favourite_image_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/favourite_audio_video_cardView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ripple_effect"
+        app:cardBackgroundColor="#FF5722"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/images_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="@string/image"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favourite_pdf_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/favourite_image_cardView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ripple_effect"
+        app:cardBackgroundColor="#009688"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/files_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="@string/pdf"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!--<Button
+        android:id="@+id/favourite_message"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:layout_below="@id/favourite_dashboard_toolbar"
+        android:text="@string/message"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/favourite_audio_and_video"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/favourite_dashboard_toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/audio_and_video"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/favourite_image"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favourite_message"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="43.5dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/image"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/favourite_pdf"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favourite_audio_and_video"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/pdf"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />-->
+
+</RelativeLayout>

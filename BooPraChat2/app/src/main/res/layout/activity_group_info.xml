@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupChats.GroupInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/yellow_and_green_status_bar_gradient"
+        tools:ignore="Orientation" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/group_info_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/yellow_and_green_status_bar_gradient">
+
+                <LinearLayout
+                    android:id="@+id/group_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/group_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_group_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <ImageView
+                    android:id="@+id/group_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/group_description"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/group_created_by_and_time"
+                    android:background="#85AAAAAA"
+                    android:maxLines="2"
+                    android:text="The description of group"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/read_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/group_created_by_and_time"
+                    android:layout_toEndOf="@id/group_description"
+                    android:background="#85AAAAAA"
+                    android:text="@string/readMore"
+                    android:textColor="@color/teal_200"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/group_created_by_and_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#85AAAAAA"
+                    android:padding="3dp"
+                    android:text="CreatedBy"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/edit_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:drawableStart="@drawable/ic_baseline_edit_green"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/modifyTeam"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/add_participants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/addSoldiers"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                app:drawableStartCompat="@drawable/ic_baseline_add_participant_green24" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/make_admin_can_send_msg_lock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_lock_green"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/makeOnlyCommandersCanSendMessage"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/now_all_can_send_message_in_this_group" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_all_can_send_msg_unlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_lock_open_green"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/makeAllCanSendMessage"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/now_only_commander_can_send_message_in_this_group" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/exit_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:drawableStart="@drawable/ic_baseline_exit_group_green"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/leave_from_team"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/commanders_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_group_members_green"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/commander"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/soldiers_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_group_members_green"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/soldier"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/participants_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_group_members_green"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/team"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_participants_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_add_participants" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

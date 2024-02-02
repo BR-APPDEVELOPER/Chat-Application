@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MediaFragments.DocumentFragment">
+
+    <TextView
+        android:id="@+id/no_documents_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="There is no Documents"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/media_document_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_media_document" />
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/media_toolbar_design"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/delete_message"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/ic_baseline_delete_24" />
+
+        <ImageView
+            android:id="@+id/forward_message"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/forward" />
+
+        <ImageView
+            android:id="@+id/share_message"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/ic_baseline_share" />
+
+        <ImageView
+            android:id="@+id/favourite"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_add_to_favorite" />
+
+        <ImageView
+            android:id="@+id/down_arrow"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_arrow_down" />
+
+    </LinearLayout>
+
+</RelativeLayout>

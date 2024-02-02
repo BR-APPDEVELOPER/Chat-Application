@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <TextView
+        android:id="@+id/no_documents_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="There is no Documents"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/media_pdf_file_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/ripple_effect"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/pdf_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_picture_as_pdf_24" />
+
+        <TextView
+            android:id="@+id/media_pdf_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/pdf_icon"
+            android:singleLine="true"
+            android:textSize="17dp"
+            android:text="zdrbgardbgvadftrgvbsshtshbtsrt"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/media_pdf_file_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/media_pdf_file_name"
+            android:layout_alignParentEnd="true"
+            android:text="12/02/2202" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

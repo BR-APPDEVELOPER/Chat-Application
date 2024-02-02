@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupChats.GroupMessageSeenByActivity">
+
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_and_green_status_bar_gradient">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/message_seen_by_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message_info"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/see_selected_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/status_bar"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/chat_screen_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/selected_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/message_sender_design"
+            android:maxWidth="300dp"
+            android:maxHeight="220dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/seen_by_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/see_selected_message_layout"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/message_seen_by"
+        android:textColor="@color/teal_200"
+        android:textSize="18dp"
+        android:textStyle="normal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/group_message_seen_by_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/seen_by_tv"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_group_message_seen_by" />
+
+</RelativeLayout>

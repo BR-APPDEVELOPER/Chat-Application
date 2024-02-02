@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_and_green_register_login_background_gradient"
+    tools:context=".Login_page">
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_login_register_design"
+        android:gravity="center"
+        android:text="BooPraChat"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/app_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edt_focused_design"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="25dp"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_emailErrorBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_email"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="12dp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_emailErrorBox"
+        android:layout_centerHorizontal="true"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_lock_for_register_page"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edt_focused_design"
+            android:drawablePadding="5dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_passwordErrorBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_toggle"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_forgotpaassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_passwordErrorBox"
+        android:layout_marginStart="222dp"
+        android:background="@drawable/ripple_effect"
+        android:text="@string/forgot_password"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_passwordErrorBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_login_register_design"
+        android:text="@string/login"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/ripple_effect"
+        android:text="@string/register"
+        android:textColor="@android:color/black"
+        android:textSize="17dp" />
+
+</RelativeLayout>

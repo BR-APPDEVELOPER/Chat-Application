@@ -1,0 +1,294 @@
+<resources>
+    <string name="app_name">BooPraChat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="zero">0</string>
+
+    <!-- for default language-->
+
+    <!--in Group info layout for wallpaper layout-->
+    <string name="modifyTeam">Modify team</string>
+    <string name="addSoldiers">Add soldiers</string>
+    <string name="makeOnlyCommandersCanSendMessage">Make only commanders can send message</string>
+    <string name="now_all_can_send_message_in_this_group">(now all can send message in this team)</string>
+    <string name="makeAllCanSendMessage">Make all can send message</string>
+    <string name="now_only_commander_can_send_message_in_this_group">(now only commander can send message in this team)</string>
+    <string name="commander">Commander</string>
+    <string name="soldier">Soldier</string>
+    <string name="team">Team</string>
+    <string name="readMore">...Read more</string>
+
+    <string name="delete_team">Delete Team</string>
+    <string name="are_you_sure_you_want_to_delete_team">Are you sure you want to Delete Team?</string>
+    <string name="delete">Delete</string>
+    <string name="leave_team">Leave Team</string>
+    <string name="are_you_sure_you_want_to_leave_from_this_team">Are you sure you want to Leave from this Team?</string>
+    <string name="leave">Leave</string>
+    <string name="now_all_can_send_message">Now all can send message</string>
+    <string name="now_only_commanders_can_send_message">Now only the commanders can send message</string>
+    <string name="team_deleted_successfully">Team deleted successfully</string>
+    <string name="successfully_your_leaved_from_team">Successfully your leaved from team</string>
+    <string name="leave_from_team">Leave from team</string>
+    <string name="team_description">Team description: </string>
+    <string name="team_created_by">Team created by:</string>
+    <string name="on">" On"</string>
+
+    <!--for main menu items-->
+    <string name="logout">Logout</string>
+    <string name="favourite">Favourite</string>
+    <string name="create_team">Create Team
+    </string>
+
+    <!--for chat menu items-->
+    <string name="typingWallpaper">Typing wallpaper</string>
+    <string name="media">Media</string>
+    <string name="unblock">UnBlock</string>
+    <string name="block">Block</string>
+
+    <!--for group chat menu items-->
+    <string name="groupInfo">Group Info</string>
+
+    <!--for bottom menu for dashboard activity menu items-->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="groupChat">Group Chat</string>
+
+    <!--for Message activity and group message activity-->
+    <string name="typing">typing..</string>
+    <string name="last_seen">Last seen:</string>
+    <string name="please_enter_message">Please enter message</string>
+    <string name="file_uploaded">File uploaded</string>
+    <string name="failed_to_upload">Failed to upload!</string>
+    <string name="new_message">New Message</string>
+    <string name="please_provide_permission_to_access_storage">Please provide permission to access storage</string>
+    <string name="please_enable_camera_and_storage_permission"><![CDATA[Please enable camera & Storage permission]]></string>
+    <string name="online">online</string>
+    <string name="enter_message">Enter Message</string>
+
+    <string name="image_uploaded">Image uploaded</string>
+    <string name="audio_uploaded">Audio uploaded</string>
+    <string name="video_uploaded">Video uploaded</string>
+    <string name="pdf_uploaded">Pdf uploaded</string>
+
+    <string name="sending_image">Sending image...</string>
+    <string name="sending_audio">Sending audio...</string>
+    <string name="sending_video">Sending video...</string>
+    <string name="sending_pdf">Sending pdf...</string>
+
+
+    <!--message activity adapter (chat adapter) and group message activity (groupChat Adapter)-->
+    <string name="already_in_favourite">Already in favourite</string>
+    <string name="added_to_favourite">Added to Favourite</string>
+    <string name="failed">Failed ! </string>
+    <string name="text_copied">Text copied</string>
+    <string name="you_can_delete_only_your_message">You can delete only your message</string>
+
+    <string name="left_from_team">" left from team"</string>
+
+    <!--favouriteMessagesAdapter-->
+    <string name="conscience">Conscience</string>
+    <string name="removed_from_favourite">Removed from favourite</string>
+
+    <!--participantAddAdapter-->
+    <string name="successfully_send">Successfully sent</string>
+    <string name="remove">Remove </string>
+    <string name="from_commander_role"> from Commander role</string>
+    <string name="remove_commander">Remove Commander </string>
+    <string name="from_team"> from team</string>
+    <string name="make_soldier">Make soldier </string>
+    <string name="to_commander_role"> to commander role</string>
+    <string name="remove_soldier">Remove soldier </string>
+    <string name="leader_of_team">Leader of team</string>
+    <string name="add_soldier">Add Soldier</string>
+    <string name="add_this_soldier_in_this_team">Do you want to add is soldier in this team ?</string>
+    <string name="add">Yes</string>
+    <string name="cancel">No</string>
+    <string name="soldier_added_successfully">Soldier added Successfully</string>
+    <string name="now_this_soldier_promoted_to_commander">Now this soldier promoted to Commander</string>
+    <string name="now_this_commander_changed_to_soldier_role">Now this commander changed to soldier role</string>
+    <string name="successfully_removed_from_team">Successfully removed from team</string>
+    <string name="choose_option">Choose option</string>
+
+    <!--for Home_Fragment-->
+    <string name="confirm">Confirm</string>
+    <string name="do_you_want_to_logout">Do you want to logout ?</string>
+    <string name="ok">Yes</string>
+
+    <!--for EditGroupDetailsActivity-->
+    <string name="modify_team">Modify Team</string>
+    <string name="please_wait">Please wait</string>
+    <string name="updating_team_info">Updating team info...</string>
+    <string name="team_info_updated">Team info updated</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="pick_image_from">Pick Image From</string>
+    <!--in ui views-->
+    <string name="team_title">Team title</string>
+    <string name="teamDescription">Team description</string>
+
+    <!--for GroupCreateActivity-->
+    <string name="creating_team">Creating Team...</string>
+    <string name="please_enter_team_name">Please enter team name</string>
+    <string name="team_created_successfully">Team created successfully\n \t Now you can chat with your team</string>
+
+    <!--GroupMessageSeenByActivity-->
+    <string name="message_seen_by">Message seen by</string>
+    <string name="message_info">Message info</string>
+
+    <!--ReadGroupDescriptionActivity-->
+    <!--ui views-->
+    <string name="Team_Description">Team Description</string>
+
+    <!--ImageReceiveActivity-->
+    <string name="no_more_images">No more images</string>
+    <string name="no_previous_images">No previous images</string>
+    <!--ui views-->
+    <string name="send_to">Send to </string>
+    <string name="chat"> Chat</string>
+    <string name="or">or</string>
+    <string name="group_chat">Group Chat</string>
+
+    <!--SendToActivity-->
+    <!--ui views-->
+    <string name="Send_to">Send to...</string>
+    <string name="goto_chat">GoTo Chat</string>
+    <string name="send_to_groupChat">Send to GroupChat</string>
+    <string name="send_to_chat">Send to Chat</string>
+    <string name="applying_changes">Applying changes</string>
+    <string name="changes_applied">Changes applied</string>
+    <string name="failed_to_apply_changes">Failed to apply changes !</string>
+    <string name="updating_profile_picture">Updating Profile Picture</string>
+    <string name="image_updated">Image Updated</string>
+    <string name="failed_to_update">Failed to update !</string>
+    <!--ui views-->
+    <string name="profile">Profile</string>
+    <string name="changeProfilePhoto">Change Profile Photo</string>
+    <string name="username">Username</string>
+
+    <!--EditWallPaperActivity-->
+    <string name="updating_home_screen_picture">Updating Home Screen Picture</string>
+    <string name="updating_chat_screen_picture">Updating Chat Screen Picture</string>
+    <!--ui views-->
+    <string name="homeScreenWP">Home Screen WP</string>
+    <string name="chatScreenWP">Chat Screen WP</string>
+
+    <!--PreviewTypingToWallpaperActivity-->
+    <string name="there_is_no_changes_my_friend">There is no changes my friend</string>
+    <string name="uploading">Uploading...</string>
+    <string name="uploaded_successfully_please_wait_to_load">Uploaded successfully Please wait to load</string>
+    <!--ui views-->
+    <string name="preview">Preview</string>
+    <string name="done">Done</string>
+
+    <!--Settings_Activity-->
+    <string name="select_language">Select Language</string>
+    <!--ui views-->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="typing_to_wallpaper">Typing to wallpaper</string>
+    <string name="blocked_users">Blocked users</string>
+    <string name="language">Language</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="settings">Settings</string>
+    <string name="chatScreenWallpaperHomeScreenWallpaper">ChatScreenWallpaper, HomeScreenWallpaper</string>
+
+    <!--Login_page-->
+    <string name="login">Login</string>
+    <string name="email_is_required">Email is required</string>
+    <string name="password_is_required">Password is required</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="recover">Recover</string>
+    <string name="sending_email">Sending email...</string>
+    <string name="email_sent">Email sent</string>
+    <string name="login_user">Login User...</string>
+    <string name="welcome_to_booprachat">Welcome to BooPraChat</string>
+    <string name="email">Email</string>
+    <!--ui views-->
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="register">Register?</string>
+
+    <!--MainActivity-->
+    <!--ui views-->
+    <string name="login_with_boopra">Login With BooPra</string>
+    <string name="Register">Register</string>
+    <string name="sent_you_a_audio">Sent you a audio...</string>
+    <string name="sent_you_a_video">Sent you a video...</string>
+    <string name="sent_you_a_pdf">Sent you a pdf...</string>
+    <string name="sent_you_a_photo">Sent you a photo...</string>
+
+    <!--Register_page-->
+    <string name="create_account">Create Account</string>
+    <string name="registering_user">Registering User...</string>
+    <string name="username_is_required">Username is required</string>
+    <string name="password_must_be_greater_than_9_characters">Password must be greater than 9 characters</string>
+    <string name="your_account_registered_successfully">Your Account Registered Successfully</string>
+    <string name="you_entered_email_is_in_invalid_format">You entered email is in invalid format</string>
+    <!--ui views-->
+    <string name="already_have_an_account_login_here">Already have an account? Login Here?</string>
+
+    <!--for ChatListAdapter-->
+    <!--row_chatlist-->
+    <string name="photo">Photo</string>
+    <string name="pdf">Pdf</string>
+    <string name="audio">Audio</string>
+    <string name="video">Video</string>
+
+    <!--for SendToAdapter-->
+    <string name="sending_images">Sending images...</string>
+    <string name="forwarding_video">Forwarding video...</string>
+    <string name="forwarding_image">Forwarding image...</string>
+    <string name="forwarding_audio">Forwarding audio...</string>
+    <string name="forwarding_pdf">Forwarding pdf...</string>
+    <string name="sending_text">Sending text...</string>
+
+    <!--for FavouriteDashboardActivity--> <!--ui views-->
+    <string name="favourite_chats">Favourite Chats</string>
+    <string name="message">Message</string>
+    <string name="audio_and_video">Audio and Video</string>
+    <string name="image">Image</string>
+
+    <!--for FavouriteImageActivity--> <!--ui views-->
+    <string name="favourite_images">Favourite Images</string>
+
+    <!--for FavouriteMessagesActivity--> <!--ui views-->
+    <string name="favourite_messages">Favourite Messages</string>
+
+    <!--for FavouritePdfActivity--> <!--ui views-->
+    <string name="favourite_pdf">Favourite Pdf</string>
+
+    <!--for FavouriteVideoActivity--> <!--ui views-->
+    <string name="favourite_videos">Favourite Videos</string>
+
+    <string name="blocked_successfully">Blocked successfully</string>
+    <string name="unblocked_successfully">Unblocked successfully</string>
+    <string name="only_the_commander_can_send_message">Only the commander can send message</string>
+    <string name="name">Name</string>
+    <string name="booprachat">BooPraChat</string>
+
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="please_check_your_connection">Please Check Your Connection</string>
+    <string name="retry">Retry</string>
+    <string name="chat_question_mark">chat?</string>
+    <string name="do_you_want_to_delete">Do you want to delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="clear_all">Clear all</string>
+    <string name="Are_you_sure_do_you_want_to_delete_all_messages">Are you sure do you want to delete all messages?</string>
+    <string name="documents">Documents</string>
+    <string name="something_went_wrong_please_try_again_later">Something went wrong please try again later</string>
+    <string name="exit">Exit</string>
+    <string name="download_canceled">Download canceled</string>
+    <string name="completed">Completed</string>
+    <string name="at_a_time_you_can_download_only_one_file">At a time you can download only one file OR cancel the downloading file then download this file</string>
+    <string name="Cancel">Cancel</string>
+    <string name="enter_the_email">Enter the email</string>
+
+    <!--for storage permission alert dialog-->
+    <string name="notice">Notice</string>
+    <string name="storage_permission">Please give permission to access storage, without storage permission the app will not work, Don\'t worry about your data, we will access only this app files.</string>
+    <string name="open">Open</string>
+    <string name="download_completed">Download completed</string>
+    <string name="downloading">Downloading...</string>
+
+</resources>

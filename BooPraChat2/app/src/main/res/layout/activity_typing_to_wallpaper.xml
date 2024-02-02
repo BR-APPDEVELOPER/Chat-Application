@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings.TypingToWallpaperActivity">
+
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/yellow_and_green_status_bar_gradient"
+        tools:ignore="Orientation" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/typing_to_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/status_bar"
+        android:background="@drawable/yellow_and_green_status_bar_gradient" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/typing_to_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/typing_to_toolbar"
+        tools:listitem="@layout/row_add_typing_to_wallpaper" />
+
+</RelativeLayout>

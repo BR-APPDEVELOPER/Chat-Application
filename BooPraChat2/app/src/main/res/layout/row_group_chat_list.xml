@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_effect">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/group_chat_profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/group_chat_profile_text"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_text_view_for_profile_design"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/group_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/group_chat_profile_image"
+            android:hint="Natpu tha yengolo da uyeir"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/last_message_sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/group_chat_name"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/group_chat_profile_image"
+            android:maxWidth="100dp"
+            android:maxLines="1"
+            android:text="Sender name:"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/unread_message_count_for_group_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:minWidth="18dp"
+            android:minHeight="18dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="10dp" />
+
+        <TextView
+            android:id="@+id/gc_text_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/group_chat_name"
+            android:layout_marginTop="1dp"
+            android:layout_toStartOf="@id/unread_message_count_for_group_chat"
+            android:layout_toEndOf="@id/last_message_sender_name"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/gc_photo_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/group_chat_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/last_message_sender_name"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_photo_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/photo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gc_pdf_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/group_chat_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/last_message_sender_name"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_pdf_gray_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pdf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gc_audio_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/group_chat_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/last_message_sender_name"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_audio_gray_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/audio" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gc_video_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/group_chat_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/last_message_sender_name"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_video_gray_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/video" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/last_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/last_message_sender_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="11:55"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selected_item"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#32FF4545"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/linear_toolbar"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/holo_red_light"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/group_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_group_chat_list_info" />
+
+            <ImageView
+                android:id="@+id/exit_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_group_chat_list_exit" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

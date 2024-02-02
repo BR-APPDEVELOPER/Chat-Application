@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/wallpaper"
+        android:title="@string/wallpaper" />
+
+    <item
+        android:id="@+id/nav_blocking"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_media"
+        android:title="@string/media" />
+
+    <item
+        android:id="@+id/typing_wallpaper"
+        android:title="@string/typingWallpaper" />
+
+</menu>

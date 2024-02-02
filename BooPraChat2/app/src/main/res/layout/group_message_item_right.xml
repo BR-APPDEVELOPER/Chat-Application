@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_message_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <!--text message layout-->
+    <RelativeLayout
+        android:id="@+id/text_message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/message_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/message_sender_design"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/show_sender_receiver_Msgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:linksClickable="true"
+                android:maxWidth="300dp"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="0dp"
+                android:text="Hello"
+                android:textColor="@android:color/black"
+                android:textColorLink="#A14951"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:id="@+id/text_message_seen_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="9dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/eye_icon_for_text"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="1dp"
+                    android:minWidth="15dp"
+                    android:minHeight="15dp"
+                    android:src="@drawable/eye_opened" />
+
+                <TextView
+                    android:id="@+id/text_message_seen_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:textSize="9dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--image message layout-->
+    <RelativeLayout
+        android:id="@+id/image_message_layout"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/image_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/show_sender_receiver_image"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#C8ABABAB"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/image_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_sender_receiver_image"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/image_message_seen_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@id/show_sender_receiver_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/time_for_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="11:55"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eye_icon_for_image"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:src="@drawable/eye_opened" />
+
+            <TextView
+                android:id="@+id/image_message_seen_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_download_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@id/show_sender_receiver_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp">
+
+            <ProgressBar
+                android:id="@+id/image_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:progress="100" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/download_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_effect"
+                android:src="@drawable/download_icon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--image and text message layout-->
+    <RelativeLayout
+        android:id="@+id/image_and_text__message_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/image_text_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/show_Sender_Receiver_Image_And_Text"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:background="#C8ABABAB"
+            android:maxWidth="284dp"
+            android:maxHeight="200dp"
+            android:minWidth="284dp"
+            android:minHeight="200dp"
+            android:scaleType="center"
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+        <TextView
+            android:id="@+id/image_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_Sender_Receiver_Image_And_Text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:maxWidth="300dp"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Hello"
+            android:textColor="@android:color/black"
+            android:textColorLink="#A14951"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/image_text_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_text"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-0.5dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/image_text_message_seen_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/TimeForImageAndText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eye_icon_for_image_text"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:src="@drawable/eye_opened" />
+
+            <TextView
+                android:id="@+id/image_text_message_seen_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_and_text_download_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@+id/image_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp">
+
+            <ProgressBar
+                android:id="@+id/image_and_text_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:progress="100" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_image_and_text"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/download_image_and_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ripple_effect"
+                android:src="@drawable/download_icon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--leaved from group message layout-->
+    <RelativeLayout
+        android:id="@+id/leaved_from_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/leaved_from_group_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/left_from_group_design"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <!--audio message layout-->
+    <RelativeLayout
+        android:id="@+id/audio_message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:paddingStart="3dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="0dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/audio_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/music_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/ic_baseline_music_note_24" />
+
+        <TextView
+            android:id="@+id/music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/audio_download_layout"
+            android:layout_toEndOf="@id/music_icon"
+            android:background="@drawable/ripple_effect"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="15425546464"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/audio_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/music_name"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="1dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/audio_message_seen_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/music_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/time_for_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eye_icon_for_audio"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:src="@drawable/eye_opened" />
+
+            <TextView
+                android:id="@+id/audio_message_seen_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="0"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/audio_download_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/download_background_design">
+
+            <ProgressBar
+                android:id="@+id/audio_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:progress="100" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_audio"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/download_audio"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ripple_effect"
+                android:src="@drawable/download_icon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--video message layout-->
+    <RelativeLayout
+        android:id="@+id/video_message_layout"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/video_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black">
+
+            <VideoView
+                android:id="@+id/show_video"
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/video_play_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:elevation="5dp"
+                android:src="@drawable/video_play_button" />
+
+            <ProgressBar
+                android:id="@+id/preload_progress_bar_for_video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:elevation="5dp" />
+
+            <ImageView
+                android:id="@+id/video_camera_icon_for_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/show_video"
+                android:layout_alignParentStart="true"
+                android:elevation="5dp"
+                android:src="@drawable/video_camera_symbol" />
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="-4dp"
+                android:layout_marginBottom="5.6dp"
+                android:background="@drawable/video_camera_background_design"
+                android:elevation="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/video_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/show_video"
+                android:layout_marginBottom="4.7dp"
+                android:layout_toEndOf="@+id/video_camera_icon_for_video"
+                android:elevation="5dp"
+                android:text="00.00"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/video_download_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/show_video"
+                android:layout_alignParentEnd="true">
+
+                <ProgressBar
+                    android:id="@+id/video_downloading_circle_progress_bar"
+                    style="@style/CircularDeterminateProgressBarForSenderSide"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:progress="100" />
+
+                <ImageButton
+                    android:id="@+id/pause_resume_for_video"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/transparent"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/download_video"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ripple_effect"
+                    android:src="@drawable/download_icon" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/video_message_seen_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/time_for_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eye_icon_for_video"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:src="@drawable/eye_opened" />
+
+            <TextView
+                android:id="@+id/video_message_seen_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="0"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/video_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_layout"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!--video and text message layout-->
+    <RelativeLayout
+        android:id="@+id/video_and_text_message_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/video_text_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/video_text_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black">
+
+            <VideoView
+                android:id="@+id/show_video_and_text"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:id="@+id/video_and_text_play_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:elevation="5dp"
+                android:src="@drawable/video_play_button" />
+
+            <ProgressBar
+                android:id="@+id/preload_progress_bar_for_video_text"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:elevation="5dp" />
+
+            <ImageView
+                android:id="@+id/video_camera_icon_for_video_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/show_video_and_text"
+                android:layout_alignParentStart="true"
+                android:elevation="5dp"
+                android:src="@drawable/video_camera_symbol" />
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="-4dp"
+                android:layout_marginBottom="5.6dp"
+                android:layout_toEndOf="@id/video_camera_icon_for_video_text"
+                android:background="@drawable/video_camera_background_design"
+                android:elevation="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/video_text_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/show_video_and_text"
+                android:layout_marginBottom="4.7dp"
+                android:layout_toEndOf="@id/video_camera_icon_for_video_text"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="00.00"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/video_and_text_download_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/show_video_and_text"
+                android:layout_alignParentEnd="true">
+
+                <ProgressBar
+                    android:id="@+id/video_and_text_downloading_circle_progress_bar"
+                    style="@style/CircularDeterminateProgressBarForSenderSide"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:progress="100" />
+
+                <ImageButton
+                    android:id="@+id/pause_resume_for_video_and_text"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/transparent"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/download_video_and_text"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ripple_effect"
+                    android:src="@drawable/download_icon" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/video_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_text_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:maxWidth="300dp"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Hello"
+            android:textColor="@android:color/black"
+            android:textColorLink="#A14951"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/video_text_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_text"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-0.5dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/video_text_message_seen_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/TimeForVideoAndText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eye_icon_for_video_text"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:src="@drawable/eye_opened" />
+
+            <TextView
+                android:id="@+id/video_text_message_seen_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="0"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--pdf message layout-->
+    <RelativeLayout
+        android:id="@+id/pdf_message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:paddingStart="3dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="0dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pdf_sender_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pdf_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_picture_as_pdf_24" />
+
+        <TextView
+            android:id="@+id/pdf_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/pdf_download_layout"
+            android:layout_toEndOf="@id/pdf_icon"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="123456789012"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/pdf_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pdf_icon"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-1dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/pdf_message_seen_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pdf_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-1dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/time_for_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="11:55"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eye_icon_for_pdf"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:src="@drawable/eye_opened" />
+
+            <TextView
+                android:id="@+id/pdf_message_seen_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="0"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/pdf_download_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/download_background_design">
+
+            <ProgressBar
+                android:id="@+id/pdf_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:progress="100" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_pdf"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/download_pdf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ripple_effect"
+                android:src="@drawable/download_icon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

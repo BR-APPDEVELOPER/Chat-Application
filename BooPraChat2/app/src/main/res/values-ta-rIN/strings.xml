@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BooPraChat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="zero">0</string>
+
+    <!-- for tamil language-->
+
+    <!--in Group info layout for wallpaper layout-->
+    <string name="modifyTeam">குழுவை மாற்ற</string>
+    <string name="addSoldiers">சிப்பாய்களைச் சேர்க்க</string>
+    <string name="makeOnlyCommandersCanSendMessage">படைத்தலைவர்கள் மட்டுமே செய்தியை அனுப்ப முடியும்</string>
+    <string name="now_all_can_send_message_in_this_group">(இப்பொழுது அனைவரும் இந்தக் குழுவில் செய்திகளை அனுப்பலாம்)</string>
+    <string name="makeAllCanSendMessage">அனைவருக்கும் செய்திகளை அனுப்ப முடியும்</string>
+    <string name="now_only_commander_can_send_message_in_this_group">(இப்பொழுது படைத்தலைவர்கள் மட்டுமே இந்தக் குழுவில் செய்திகளை அனுப்ப முடியும்)</string>
+    <string name="commander">படைத்தலைவன்</string>
+    <string name="soldier">சிப்பாய்</string>
+    <string name="team">அணி</string>
+    <string name="readMore">மேலும் வாசிக்க</string>
+
+    <string name="delete_team">அணியை நீக்கு</string>
+    <string name="are_you_sure_you_want_to_delete_team">நீங்கள் நிச்சயமாக அணியை நீக்க விரும்புகிறீர்களா ?</string>
+    <string name="delete">அழி</string>
+    <string name="leave_team">அணியிலிருந்து வெளியேற</string>
+    <string name="are_you_sure_you_want_to_leave_from_this_team">இந்த குழுவிலிருந்து நிச்சயமாக வெளியேற விரும்புகிறீர்களா ?</string>
+    <string name="leave">விடு</string>
+    <string name="now_all_can_send_message">இப்பொழுது அனைவரும் செய்திகளை அனுப்பலாம்</string>
+    <string name="now_only_commanders_can_send_message">இப்பொழுது படைத்தலைவர்கள் மட்டுமே செய்திகளை அனுப்ப முடியும்</string>
+    <string name="team_deleted_successfully">அணி வெற்றிகரமாக நீக்கப்பட்டது</string>
+    <string name="successfully_your_leaved_from_team">வெற்றிகரமாக நீங்கள் அணியிலிருந்து வெளியேறினீர்கள்</string>
+    <string name="leave_from_team">அணியிலிருந்து வெளியேறு</string>
+    <string name="team_description">அணி விளக்கம்: </string>
+    <string name="team_created_by">அணியை உருவாக்கியவர்:</string>
+    <string name="on">" அன்று"</string>
+
+    <!--for menu items-->
+    <string name="logout">வெளியேற</string>
+    <string name="favourite">பிடித்தவை</string>
+    <string name="create_team">அணியை உருவாக்க</string>
+
+    <!--for chat menu items-->
+    <string name="typingWallpaper">பின்னணி நிலர்படம் தட்டச்சு செய்யும்பொழுது</string>
+    <string name="media">ஊடகம்</string>
+    <string name="unblock">தடைநீக்கு</string>
+    <string name="block">தடு</string>
+
+    <!--for chat menu items-->
+    <string name="groupInfo">குழுத் தகவல்</string>
+
+    <!--for bottom menu for dashboard activity menu items-->
+    <string name="home">முகப்புப் பக்கம்</string>
+    <string name="search">தேடு</string>
+    <string name="groupChat">குழு அரட்டை</string>
+
+    <!--for Message activity and group message activity-->
+    <string name="typing">தட்டச்சு..</string>
+    <string name="last_seen">இறுதியாக பார்த்தது:</string>
+    <string name="please_enter_message">தயவுசெய்து செய்தியை உள்ளிடவும்</string>
+    <string name="file_uploaded">கோப்பு பதிவேற்றப்பட்டது</string>
+    <string name="failed_to_upload">பதிவேற்ற முடியவில்லை !</string>
+    <string name="new_message">புதிய தகவல்</string>
+    <string name="please_provide_permission_to_access_storage">சேமிப்பகத்தை அணுக அனுமதி வழங்கவும்</string>
+    <string name="please_enable_camera_and_storage_permission"><![CDATA[தயவுசெய்து கேமரா & சேமிப்பு அனுமதியை இயக்கவும்]]></string>
+    <string name="online">நிகழ்நிலை</string>
+    <string name="enter_message">செய்தியை உள்ளிடவும்</string>
+
+    <string name="image_uploaded">படம் பதிவேற்றப்பட்டது</string>
+    <string name="audio_uploaded">ஒலி பதிவேற்றப்பட்டது</string>
+    <string name="video_uploaded">வீடியோ பதிவேற்றப்பட்டது</string>
+    <string name="pdf_uploaded">பிடிஎஃப் பதிவேற்றம் செய்யப்பட்டது</string>
+
+    <string name="sending_image">படத்தை அனுப்புகிறது...</string>
+    <string name="sending_audio">ஒலியை அனுப்புகிறது...</string>
+    <string name="sending_video">வீடியோவை அனுப்புகிறது...</string>
+    <string name="sending_pdf">பிடிஎஃப் அனுப்புகிறது...</string>
+
+    <!--message activity adapter (chat adapter) and group message activity (groupChat Adapter)-->
+    <string name="already_in_favourite">ஏற்கனவே பிடித்த நிலையில் உள்ளது</string>
+    <string name="added_to_favourite">பிடித்ததில் சேர்க்கப்பட்டது</string>
+    <string name="failed">தோல்வி ! </string>
+    <string name="text_copied">உரை நகலெடுக்கப்பட்டது</string>
+    <string name="you_can_delete_only_your_message">உங்கள் செய்தியை மட்டுமே நீக்க முடியும்</string>
+
+    <string name="left_from_team">" அணியிலிருந்து வெளியேறினார்"</string>
+
+    <!--**********************************************************************************************-->
+    <!--favouriteMessagesAdapter-->
+    <string name="conscience">மனசாட்சி</string>
+    <string name="removed_from_favourite">பிடித்ததில் இருந்து நீக்கப்பட்டது</string>
+
+    <!--participantAddAdapter-->
+    <string name="successfully_send">வெற்றிகரமாக அனுப்பப்பட்டது</string>
+    <string name="remove">படைத்தளபதியில் இருந்து</string>
+    <string name="from_commander_role"> நீக்கவதர்க்கு</string>
+    <string name="remove_commander">அணியிலிருந்து படைத்தளபதியை</string>
+    <string name="from_team">நீக்கவதர்க்கு</string>
+    //நீக்குவதர்க்கு
+    <string name="make_soldier">சிப்பாய்</string>
+    <string name="to_commander_role">  படைத்தளபதியாக உருவாக்க</string>
+    <string name="remove_soldier">சிப்பாயை</string>
+    <string name="leader_of_team">அணியின் தலைவர்</string>
+    <string name="add_soldier">சிப்பாயைச் சேர்க்க</string>
+    <string name="add_this_soldier_in_this_team">இந்த அணியில் சிப்பாயை சேர்க்க விரும்புகிறீர்களா ?</string>
+    <string name="add">ஆம்</string>
+    <string name="cancel">இல்லை</string>
+    <string name="soldier_added_successfully">சிப்பாய் வெற்றிகரமாக சேர்க்கப்பட்டார்</string>
+    <string name="now_this_soldier_promoted_to_commander">இப்போது இந்த சிப்பாய் படைத்தளபதியாக பதவி உயர்வு பெற்றார்</string>
+    <string name="now_this_commander_changed_to_soldier_role">இப்போது இந்த படைத்தளபதி சிப்பாயாக மாறினார்</string>
+    <string name="successfully_removed_from_team">அணியில் இருந்து வெற்றிகரமாக நீக்கப்பட்டது</string>
+    <string name="choose_option">விருப்பத்தை தேர்வு செய்யவும்</string>
+
+    <!--for Home_Fragment-->
+    <string name="confirm">உறுதிப்படுத்து</string>
+    <string name="do_you_want_to_logout">நீங்கள் வெளியேற வேண்டுமா ?</string>
+    <string name="ok">ஆம்</string>
+
+    <!--for EditGroupDetailsActivity-->
+    <string name="modify_team">அணியை மாற்றுவதர்க்கு</string>
+    <string name="please_wait">தயவுசெய்து காத்திருங்கள்</string>
+    <string name="updating_team_info">குழு தகவல்களை புதுப்பிக்கிறது...</string>
+    <string name="team_info_updated">குழு தகவல்கள் புதுப்பிக்கப்பட்டன</string>
+    <string name="camera">புகைப்பட கருவி</string>
+    <string name="gallery">காட்சி கூடம்</string>
+    <string name="pick_image_from">இதிலிருந்து படத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <!--in ui views-->
+    <string name="team_title">அணி தலைப்பு</string>
+    <string name="teamDescription">அணி விளக்கம்</string>
+
+    <!--for GroupCreateActivity-->
+    <string name="creating_team">அணி உருவாக்கப்பட்டுக் கொண்டிருக்கிறது...</string>
+    <string name="please_enter_team_name">தயவுசெய்து குழுவின் பெயரை உள்ளிடவும்</string>
+    <string name="team_created_successfully">குழு வெற்றிகரமாக உருவாக்கப்பட்டது \n \t இபபோது நீங்கள் உங்கள் அணியுடன் தவகல்களைப் பரிமாறிக் கொள்ளலாம்</string>
+
+    <!--GroupMessageSeenByActivity-->
+    <string name="message_seen_by">செய்தியை பார்த்தவர்கள்</string>
+    <string name="message_info">செய்தி தகவல்</string>
+
+    <!--ReadGroupDescriptionActivity-->
+    <!--ui views-->
+    <string name="Team_Description">அணி விளக்கம்</string>
+
+    <!--ImageReceiveActivity-->
+    <string name="no_more_images">இனி படங்கள் இல்லை</string>
+    <string name="no_previous_images">முந்தைய படங்கள் இல்லை</string>
+    <!--ui views-->
+    <string name="send_to">தனிநபர்</string>
+    <string name="chat">" அல்லது"</string>
+    <string name="or"> குழுவிற்கு</string>
+    <string name="group_chat">அனுப்புவதற்கு</string>
+
+    <!--SendToActivity-->
+    <!--ui views-->
+    <string name="Send_to">அனுப்புங்கள்...</string>
+    <string name="goto_chat">அரட்டைக்குச் செல்லவும்</string>
+    <string name="send_to_groupChat">Send to GroupChat</string>
+    <string name="send_to_chat">Send to Chat</string>
+
+    <!--EditUserDetailsActivity-->
+    <string name="applying_changes">மாற்றங்களைப் செயல்படுத்த</string>
+    <string name="changes_applied">மாற்றங்கள் செயல்படுத்தப்பட்டது</string>
+    <string name="failed_to_apply_changes">மாற்றங்களைப் செயல்படுத்துவதில் தோல்வி!</string>
+    <string name="updating_profile_picture">சுயவிவரப் படத்தைப் புதுப்பித்தல்</string>
+    <string name="image_updated">படம் புதுப்பிக்கப்பட்டது</string>
+    <string name="failed_to_update">புதுப்பிக்க முடியவில்லை!</string>
+    <!--ui views-->
+    <string name="profile">சுயவிவரம்</string>
+    <string name="changeProfilePhoto">சுயவிவர புகைப்படத்தை மாற்றவும்</string>
+    <string name="username">பயனர்பெயர்</string>
+
+    <!--EditWallPaperActivity-->
+    <string name="updating_home_screen_picture">முகப்புத் திரைப் படத்தைப் புதுப்பித்தல்</string>
+    <string name="updating_chat_screen_picture">அரட்டை திரை படத்தை புதுப்பித்தல்</string>
+    <!--ui views-->
+    <string name="homeScreenWP">முகப்புத் திரை WP</string>
+    <string name="chatScreenWP">அரட்டை திரை WP</string>
+
+    <!--PreviewTypingToWallpaperActivity-->
+    <string name="there_is_no_changes_my_friend">எந்த மாற்றமும் இல்லை நண்பரே</string>
+    <string name="uploading">பதிவேற்றுகிறது...</string>
+    <string name="uploaded_successfully_please_wait_to_load">வெற்றிகரமாக பதிவேற்றம் செய்யப்பட்டது</string>
+    <!--ui views-->
+    <string name="preview">முன்னோட்டம்</string>
+    <string name="done">முடிந்தது</string>
+
+    <!--Settings_Activity-->
+    <string name="select_language">மொழியை தேர்ந்தெடுங்கள்</string>
+    <!--ui views-->
+    <string name="edit_profile">சுயவிவரத்தைத் திருத்து</string>
+    <string name="typing_to_wallpaper">வால்பேப்பரில் தட்டச்சு செய்க</string>
+    <string name="blocked_users">தடுக்கப்பட்ட பயனர்கள்</string>
+    <string name="language">மொழி</string>
+    <string name="wallpaper">வால்பேப்பர்</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="chatScreenWallpaperHomeScreenWallpaper">சேட்ஸ்கிரீன் வால்பேப்பர், முகப்புத்திரை வால்பேப்பர்</string>
+
+    <!--Login_page-->
+    <string name="login">உள்நுழைய</string>
+    <string name="email_is_required">மின்னஞ்சல் தேவை</string>
+    <string name="password_is_required">கடவுச்சொல் தேவை</string>
+    <string name="recover_password">கடவுச்சொல்லை மீட்டெடுக்கவும்</string>
+    <string name="recover">மீட்கவும்</string>
+    <string name="sending_email">மின்னஞ்சல் அனுப்புகிறது...</string>
+    <string name="email_sent">மின்னஞ்சல் அனுப்பப்பட்டது</string>
+    <string name="login_user">உள்நுழைவு பயனர்...</string>
+    <string name="welcome_to_booprachat">பூப்ரா அரட்டைக்கு வரவேற்கிறோம்</string>
+    <string name="email">மின்னஞ்சல்</string>
+    <!--ui views-->
+    <string name="e_mail">மின்னஞ்சல்</string>
+    <string name="password">கடவுச்சொல்</string>
+    <string name="forgot_password">கடவுச்சொல்லை மறந்துவிட்டீர்களா</string>
+    <string name="register">பதிவு?</string>
+    <!--************************************************2***********************************************************-->
+    <!--MainActivity-->
+    <!--ui views-->
+    <string name="login_with_boopra">பூ ப்ராவுடன் உள்நுழைக</string>
+    <string name="Register">பதிவு</string>
+    <string name="sent_you_a_audio">உங்களுக்கு ஒரு ஆடியோ அனுப்பப்பட்டது...</string>
+    <string name="sent_you_a_video">உங்களுக்கு ஒரு வீடியோ அனுப்பியது...</string>
+    <string name="sent_you_a_pdf">உங்களுக்கு ஒரு பிடிஎஃப் அனுப்பியது...</string>
+    <string name="sent_you_a_photo">உங்களுக்கு ஒரு புகைப்படத்தை அனுப்பியது...</string>
+
+    <!--Register_page-->
+    <string name="create_account">உங்கள் கணக்கை துவங்குங்கள்</string>
+    <string name="registering_user">பயனரைப் பதிவுசெய்கிறது...</string>
+    <string name="username_is_required">பயனர்பெயர் தேவை</string>
+    <string name="password_must_be_greater_than_9_characters">கடவுச்சொல் 9 ஐ விட அதிகமாக இருக்க வேண்டும்</string>
+    <string name="your_account_registered_successfully">உங்கள் கணக்கு வெற்றிகரமாக பதிவு செய்யப்பட்டது</string>
+    <string name="you_entered_email_is_in_invalid_format">நீங்கள் உள்ளிட்ட மின்னஞ்சல் தவறான வடிவத்தில் உள்ளது</string>
+    <!--ui views-->
+    <string name="already_have_an_account_login_here">ஏற்கனவே ஒரு கணக்கு உள்ளதா ? இங்கே உள்நுழையவா ?</string>
+
+    <!--for ChatListAdapter-->
+    <!--row_chatlist-->
+    <string name="photo">புகைப்படம்</string>
+    <string name="pdf">பிடிஎஃப்</string>
+    <string name="audio">ஒலி</string>
+    <string name="video">காணொளி</string>
+
+    <!--for SendToAdapter-->
+    <string name="sending_images">புகைப்படங்களை அனுப்புகிறது...</string>
+    <string name="forwarding_video">காணொளியை அனுப்புகிறது...</string>
+    <string name="forwarding_image">புகைப்படத்தை அனுப்புகிறது...</string>
+    <string name="forwarding_audio">ஒலியை அனுப்புகிறது...</string>
+    <string name="forwarding_pdf">பிடிஎஃப் ஐ அனுப்புகிறது...</string>
+    <string name="sending_text">உரை அனுப்புகிறது...</string>
+
+    <!--for FavouriteDashboardActivity--> <!--ui views-->
+    <string name="favourite_chats">பிடித்த அரட்டைகள்</string>
+    <string name="message">செய்தி</string>
+    <string name="audio_and_video">ஒலி மற்றும் காணொளி</string>
+    <string name="image">புகைப்படம்</string>
+
+    <!--for FavouriteImageActivity--> <!--ui views-->
+    <string name="favourite_images">பிடித்த புகைப்படங்கள்</string>
+
+    <!--for FavouriteMessagesActivity--> <!--ui views-->
+    <string name="favourite_messages">பிடித்த செய்திகள்</string>
+
+    <!--for FavouritePdfActivity--> <!--ui views-->
+    <string name="favourite_pdf">பிடித்த பிடிஎஃப்</string>
+
+    <!--for FavouriteVideoActivity--> <!--ui views-->
+    <string name="favourite_videos">பிடித்த காணொளிகள்</string>
+
+    <string name="blocked_successfully">வெற்றிகரமாக தடுக்கப்பட்டது</string>
+    <string name="unblocked_successfully">வெற்றிகரமாகத் திறக்கப்பட்டது</string>
+    <string name="only_the_commander_can_send_message">தளபதி மட்டுமே செய்தி அனுப்ப முடியும்</string>
+    <string name="name">பெயர்</string>
+    <string name="booprachat">பூப்ராஅரட்டை</string>
+
+    <!--check_internet_conneciton_dialog--> <!--ui views-->
+    <string name="no_internet_connection">இணைய இணைப்பு இல்லை</string>
+    <string name="please_check_your_connection">தயவுசெய்து உங்கள் இணைப்பைச் சரிபார்க்கவும்</string>
+    <string name="retry">மீண்டும் முயற்சிக்கவும்</string>
+
+    <string name="chat_question_mark">அரட்டையா?</string>
+    <string name="do_you_want_to_delete">நீக்க வேண்டுமா</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
+    <string name="clear_all">அனைத்தையும் அழி</string>
+    <string name="Are_you_sure_do_you_want_to_delete_all_messages">எல்லா செய்திகளையும் நிச்சயமாக நீக்க விரும்புகிறீர்களா?</string>
+    <string name="documents">ஆவணங்கள்</string>
+    <string name="something_went_wrong_please_try_again_later">ஏதோ தவறு நடந்துவிட்டது தயவுசெய்து மீண்டும் முயற்சிக்கவும்</string>
+    <string name="exit">வெளியேறு</string>
+    <string name="download_canceled">பதிவிறக்கம் ரத்து செய்யப்பட்டது</string>
+    <string name="completed">நிறைவு</string>
+    <string name="at_a_time_you_can_download_only_one_file">ஒரு நேரத்தில் நீங்கள் ஒரு கோப்பை மட்டுமே பதிவிறக்கம் செய்யலாம் அல்லது பதிவிறக்கும் கோப்பை ரத்துசெய்த பிறகு இந்தக் கோப்பைப் பதிவிறக்கவும்</string>
+    <string name="Cancel">ரத்து செய்</string>
+    <string name="enter_the_email">மின்னஞ்சலை உள்ளிடவும்</string>
+
+    <!--for storage permission alert dialog-->
+    <string name="notice">கவனிக்கவும்</string>
+    <string name="storage_permission">சேமிப்பகத்தை அணுக அனுமதி வழங்கவும், சேமிப்பக அனுமதி இல்லாமல் பயன்பாடு இயங்காது, உங்கள் தரவைப் பற்றி கவலைப்பட வேண்டாம், இந்த பயன்பாட்டுக் கோப்புகளை மட்டுமே அணுகுவோம்.</string>
+    <string name="open">திற</string>
+
+    <string name="download_completed">பதிவிறக்கம் முடிந்தது</string>
+    <string name="downloading">பதிவிறக்குகிறது...</string>
+
+
+</resources>

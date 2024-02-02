@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ReceiveDataFromOtherApps.ImageReceiveActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/message_box"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/video_play_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/video_play_button" />
+
+    <RelativeLayout
+        android:id="@+id/media_controller_for_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/message_box"
+        android:layout_marginStart="12.5dp"
+        android:background="@color/transparent"
+        android:visibility="visible">
+        <!--#6EABABAB-->
+        <TextView
+            android:id="@+id/play_time_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="0:00"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/play_time_duration"
+            android:progress="0"
+            android:thumb="@drawable/thumb_for_seek_bar"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/seekbar_background"
+            android:secondaryProgressTint="@color/white" />
+
+        <TextView
+            android:id="@+id/total_video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/seek_bar"
+            android:text="0:00"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/message_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/add_caption_message_box"
+            android:hint="@string/enter_message"
+            android:maxHeight="230dp"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#96FFFFFF"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/text"
+            android:src="@drawable/ic_send" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/multiple_images_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageSwitcher
+            android:id="@+id/multiple_images_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/left_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/left_image_switcher" />
+
+        <ImageView
+            android:id="@+id/right_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/right_image_switcher" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

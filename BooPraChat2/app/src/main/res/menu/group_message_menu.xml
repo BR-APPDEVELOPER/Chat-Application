@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/add_participant"
+        android:icon="@drawable/ic_baseline_add_participant_24"
+        android:title="@string/addSoldiers"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/group_info"
+        android:title="@string/groupInfo" />
+
+    <item
+        android:id="@+id/wallpaper"
+        android:title="@string/wallpaper" />
+
+    <item
+        android:id="@+id/typing_wallpaper"
+        android:title="@string/typingWallpaper" />
+
+</menu>

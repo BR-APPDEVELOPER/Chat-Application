@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/messageLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/text_message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/message_sender_design"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/showSenderReceiver_Msgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:linksClickable="true"
+                android:maxWidth="300dp"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="0dp"
+                android:text="Hello"
+                android:textColor="@android:color/black"
+                android:textColorLink="#A14951"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/showSenderReceiver_Msgs"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="9dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/seen_delivered"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp" -->
+        <!--<LinearLayout
+            android:id="@+id/seen_delivered"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/showSenderReceiver_Msgs"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0.8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/message_devilered_design"
+            android:orientation="vertical" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_message_layout"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/show_Sender_Receiver_Image"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#C8ABABAB"
+            android:maxWidth="300dp"
+            android:maxHeight="200dp"
+            android:scaleType="center" /> <!--background #A4AAAAAA-->
+
+        <RelativeLayout
+            android:id="@+id/image_download_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ripple_effect">
+
+            <ImageButton
+                android:id="@+id/download_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/download_icon" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/image_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:progress="100" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/seen_delivered_For_Image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/show_Sender_Receiver_Image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/eye_opened" />
+
+        <TextView
+            android:id="@+id/TimeForImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_Sender_Receiver_Image"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/seen_delivered_For_Image"
+            android:text="11:55"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/image_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_Sender_Receiver_Image"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_and_text__message_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/show_Sender_Receiver_Image_And_Text"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:background="#C8ABABAB"
+            android:maxWidth="284dp"
+            android:maxHeight="200dp"
+            android:minWidth="284dp"
+            android:minHeight="200dp"
+            android:scaleType="center"
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+        <TextView
+            android:id="@+id/image_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_Sender_Receiver_Image_And_Text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:maxWidth="300dp"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Hello"
+            android:textColor="@android:color/black"
+            android:textColorLink="#A14951"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/image_and_text_download_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/image_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ripple_effect">
+
+            <ImageButton
+                android:id="@+id/download_image_and_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/download_icon" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_image_and_text"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/image_and_text_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:progress="100" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/seen_delivered_For_Image_And_Text"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/image_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/TimeForImageAndText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_text"
+            android:layout_marginTop="1.5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/seen_delivered_For_Image_And_Text"
+            android:text="11:55"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/image_text_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_text"
+            android:layout_marginStart="5dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pdf_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/pdf_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/message_sender_design">
+
+            <RelativeLayout
+                android:id="@+id/pdf_download_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/download_background_design">
+
+                <ImageButton
+                    android:id="@+id/download_pdf"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/download_icon" />
+
+                <ImageButton
+                    android:id="@+id/pause_resume_for_pdf"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/pdf_downloading_circle_progress_bar"
+                    style="@style/CircularDeterminateProgressBarForSenderSide"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:progress="100" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pdf_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/pdf_download_layout"
+                android:layout_toEndOf="@id/pdf_icon"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="123456789"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/pdf_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_baseline_picture_as_pdf_24" />
+
+            <ImageView
+                android:id="@+id/seen_delivered_For_Pdf"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/pdf_file_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="1dp" />
+
+            <TextView
+                android:id="@+id/TimeForPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pdf_file_name"
+                android:layout_marginTop="34.2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/seen_delivered_For_Pdf"
+                android:text="11:55"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pdf_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pdf_icon"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="14.5dp"
+                android:textSize="9dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/selected_item"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:background="#4F8BC34A"
+            android:visibility="gone"
+            tools:ignore="Orientation" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/audio_message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/audio_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_music_note_24" />
+
+        <TextView
+            android:id="@+id/audio_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/audio_download_layout"
+            android:layout_toEndOf="@id/audio_icon"
+            android:background="@drawable/ripple_effect"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="1234567"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/audio_download_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/download_background_design">
+
+            <ProgressBar
+                android:id="@+id/audio_downloading_circle_progress_bar"
+                style="@style/CircularDeterminateProgressBarForSenderSide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:progress="100" />
+
+            <ImageButton
+                android:id="@+id/pause_resume_for_audio"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/download_audio"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ripple_effect"
+                android:src="@drawable/download_icon" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/seen_delivered_For_Audio"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/audio_file_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/TimeForAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/audio_file_name"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/seen_delivered_For_Audio"
+            android:text="11:55"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/audio_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/audio_icon"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2.5dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_message_layout"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black">
+
+            <VideoView
+                android:id="@+id/show_video"
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/video_play_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/video_play_button" />
+
+            <ProgressBar
+                android:id="@+id/preload_progress_bar_for_video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/video_download_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/show_video"
+                android:layout_alignParentEnd="true">
+
+                <ProgressBar
+                    android:id="@+id/video_downloading_circle_progress_bar"
+                    style="@style/CircularDeterminateProgressBarForSenderSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:progress="100" />
+
+                <ImageButton
+                    android:id="@+id/pause_resume_for_video"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/download_video"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/download_icon" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/video_camera_icon_for_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/TimeForVideo"
+            android:layout_marginStart="5dp"
+            android:elevation="5dp"
+            android:src="@drawable/video_camera_symbol" />
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="5.6dp"
+            android:background="@drawable/video_camera_background_design"
+            android:elevation="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/TimeForVideo"
+            android:layout_marginBottom="4.7dp"
+            android:layout_toEndOf="@+id/video_camera_icon_for_video"
+            android:elevation="5dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/seen_delivered_For_Video"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/video_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/TimeForVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_layout"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/seen_delivered_For_Video"
+            android:text="11:55"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/video_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_layout"
+            android:layout_alignStart="@id/video_layout"
+            android:layout_marginTop="1dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_and_text__message_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/message_sender_design"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/video_text_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black">
+
+            <VideoView
+                android:id="@+id/show_video_and_text"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/video_and_text_play_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/video_play_button"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/preload_progress_bar_for_video_text"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/video_and_text_download_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/show_video_and_text"
+                android:layout_alignParentEnd="true">
+
+                <ProgressBar
+                    android:id="@+id/video_and_text_downloading_circle_progress_bar"
+                    style="@style/CircularDeterminateProgressBarForSenderSide"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:progress="100" />
+
+                <ImageButton
+                    android:id="@+id/pause_resume_for_video_and_text"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/download_video_and_text"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ripple_effect"
+                    android:src="@drawable/download_icon" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/video_camera_icon_for_video_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/video_text"
+            android:layout_marginStart="5dp"
+            android:elevation="5dp"
+            android:src="@drawable/video_camera_symbol" />
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_above="@id/video_text"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="5.6dp"
+            android:layout_toEndOf="@id/video_camera_icon_for_video_text"
+            android:background="@drawable/video_camera_background_design"
+            android:elevation="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/video_text_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/video_text"
+            android:layout_marginBottom="4.7dp"
+            android:layout_toEndOf="@+id/video_camera_icon_for_video_text"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/video_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_text_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:maxWidth="300dp"
+            android:padding="5dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Hello"
+            android:textColor="@android:color/black"
+            android:textColorLink="#A14951"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/seen_delivered_For_Video_And_Text"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/video_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/TimeForVideoAndText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_text"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/seen_delivered_For_Video_And_Text"
+            android:text="11:55"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/video_text_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_text"
+            android:layout_alignStart="@id/video_text"
+            android:layout_marginTop="2dp"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

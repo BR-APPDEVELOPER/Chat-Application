@@ -19,3 +19,14 @@ Firebase push notifications, and various multimedia sharing features.
 - **Firebase Realtime Database** – Real-time data storage
 - **Firebase Authentication** – Email-based login
 - **Firebase Cloud Messaging (FCM)** – Push notifications
+
+<i><h2>1) App Pages</h2></i>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-0.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-1.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-2.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-3.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-4.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-5.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-6.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-7.jpg"/>
+<img src="https://github.com/BR-APPDEVELOPER/Chat-Application/blob/main/all pages-images-8.jpg"/>
